@@ -6,6 +6,8 @@ namespace GunShooting
 { 
     public class Player : MonoBehaviour
     {
+        const string HitEffect = "Prefabs/HitEffect";
+
         [SerializeField] GameObject Hand;
         [SerializeField] GameObject nozleFlash;
 
@@ -17,9 +19,18 @@ namespace GunShooting
 
         public void Shoot()
         {
+            // nozleFlash
             nozleFlash.SetActive(false);
             nozleFlash.SetActive(true);
-            // TODO Hit
+
+            // Hit
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 1000.0f))
+            {
+                var obj = (GameObject)Resources.Load(HitEffect);
+                Instantiate(obj, hit.point, Quaternion.identity);
+            }
         }
     }
 }

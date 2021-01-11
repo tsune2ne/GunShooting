@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9111818245622497463}
   - component: {fileID: 6631312299242600440}
   - component: {fileID: 318442264832915599}
-  - component: {fileID: 1745052942725956397}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1745052942725956397
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6602117653908530993}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7698883318418218008
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,6 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5565531388921354259}
+  - component: {fileID: 868261316823647471}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -124,3 +111,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &868261316823647471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7698883318418218008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0052791, y: 2.0045316, z: 1}
+  m_Center: {x: 0.002639532, y: 1.0087222, z: 0}
