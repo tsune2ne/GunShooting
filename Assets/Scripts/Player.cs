@@ -7,6 +7,7 @@ namespace GunShooting
     public class Player : MonoBehaviour
     {
         [SerializeField] GameObject Hand;
+        [SerializeField] GameObject nozleFlash;
 
         public void Rotate(float rotateX, float rotateY)
         {
@@ -16,7 +17,9 @@ namespace GunShooting
 
         public void Shoot()
         {
-            Debug.Log("Shoot!");
+            nozleFlash.SetActive(false);
+            nozleFlash.SetActive(true);
+            // TODO Hit
         }
     }
 }
