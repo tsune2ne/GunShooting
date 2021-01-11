@@ -284,7 +284,7 @@ RectTransform:
   - {fileID: 504412716}
   - {fileID: 2058678094}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -472,7 +472,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &531231588
 MonoBehaviour:
@@ -487,6 +487,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1727524666}
+  Enemies:
+  - {fileID: 2080387782}
+  - {fileID: 1256303938}
+  - {fileID: 1067078404}
+  ScoreText: {fileID: 2058678095}
 --- !u!1 &615915853
 GameObject:
   m_ObjectHideFlags: 0
@@ -5377,12 +5382,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636304289}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -500, y: 0, z: -500}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -5474,7 +5479,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &710892395
 GameObject:
@@ -5507,7 +5512,7 @@ Transform:
   - {fileID: 800335335}
   - {fileID: 1353181402}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &800335335 stripped
 Transform:
@@ -5661,6 +5666,18 @@ Transform:
   m_Father: {fileID: 1646173232}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1067078404 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7718370411311372294, guid: 1f50dcfcf6224ab4abac6404e762c91d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1195674867}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d581794c85d7e30468b73fe482bf9f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1195674867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5730,6 +5747,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f50dcfcf6224ab4abac6404e762c91d, type: 3}
+--- !u!114 &1256303938 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7718370411311372294, guid: 1f50dcfcf6224ab4abac6404e762c91d,
+    type: 3}
+  m_PrefabInstance: {fileID: 9114168357157006487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d581794c85d7e30468b73fe482bf9f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1279975792 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5565531388921354259, guid: 1f50dcfcf6224ab4abac6404e762c91d,
@@ -5806,7 +5835,7 @@ Transform:
   m_Children:
   - {fileID: 1646173232}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1727524666
 MonoBehaviour:
@@ -5899,7 +5928,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2058678093
 GameObject:
@@ -5979,6 +6008,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058678093}
   m_CullTransparentMesh: 0
+--- !u!114 &2080387782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7718370411311372294, guid: 1f50dcfcf6224ab4abac6404e762c91d,
+    type: 3}
+  m_PrefabInstance: {fileID: 108257996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d581794c85d7e30468b73fe482bf9f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9114168357157006487
 PrefabInstance:
   m_ObjectHideFlags: 0

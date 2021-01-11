@@ -30,6 +30,12 @@ namespace GunShooting
             {
                 var obj = (GameObject)Resources.Load(HitEffect);
                 Instantiate(obj, hit.point, Quaternion.identity);
+
+                var enemy = hit.collider.gameObject.GetComponent<Enemy>();
+                if (enemy)
+                {
+                    enemy.Hit();
+                }
             }
         }
     }
