@@ -7,9 +7,12 @@ namespace GunShooting
 {
     public class Controller : MonoBehaviour
     {
-        [SerializeField] Player Player;
+        const string PlayerPrefab = "Prefabs/Player";
+
         [SerializeField] Enemy[] Enemies;
         [SerializeField] Text ScoreText;
+        [SerializeField] GameObject PlayerSpawnPoint;
+        Player player;
 
         int _score = 0;
         int Score
@@ -30,20 +33,24 @@ namespace GunShooting
             {
                 enemy.onDead = OnEnemyDead;
             }
+
+            var obj = (GameObject)Resources.Load(PlayerPrefab);
+            var instance = Instantiate(obj, PlayerSpawnPoint.transform.position, Quaternion.identity);
+            player = instance.GetComponent<Player>();
         }
 
         void Update()
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Player.Shoot();
+                player.Shoot();
             }
 
             var rotateX = Input.GetAxis("Mouse X");
             var rotateY = Input.GetAxis("Mouse Y");
             if (Mathf.Abs(rotateX + rotateY) > 0)
             {
-                Player.Rotate(rotateX, rotateY);
+                player.Rotate(rotateX, rotateY);
             }
         }
 
