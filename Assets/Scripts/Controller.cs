@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace GunShooting
@@ -51,7 +52,7 @@ namespace GunShooting
             // TODO back to title scene
             UIController.onBackToTitle = () =>
             {
-                Debug.Log("back to title");
+                SceneManager.LoadScene("TitleScene");
             };
             UIController.GameStart();
         }
