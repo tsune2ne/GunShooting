@@ -13,14 +13,17 @@ namespace GunShooting
     public class Controller : MonoBehaviour
     {
         const string PlayerPrefab = "Prefabs/Player";
+        const float TimerLimit = 10f;
 
         [SerializeField] Enemy[] Enemies;
         [SerializeField] Text ScoreText;
+        [SerializeField] Text TimerText;
         [SerializeField] GameObject PlayerSpawnPoint;
         [SerializeField] UIController UIController;
         GameState currentState;
         Player player;
         int deadEnemyCount = 0;
+        float timerCount = 0f;
 
         int _score = 0;
         int Score
@@ -70,6 +73,13 @@ namespace GunShooting
 
         void Update()
         {
+            timerCount += Time.deltaTime;
+            TimerText.text = Mathf.Ceil(TimerLimit - timerCount).ToString();
+            if (timerCount >= TimerLimit)
+            {
+                Finish();
+            }
+
             if (currentState == GameState.Play)
             {
                 if (Input.GetMouseButtonDown(0))
