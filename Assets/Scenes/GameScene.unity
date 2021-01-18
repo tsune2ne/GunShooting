@@ -887,8 +887,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {fileID: 1347767269}
   - {fileID: 370630820}
+  - {fileID: 1347767269}
   MaxWaitingTime: 3
   MoveSpeed: 1
 --- !u!1 &321316564
@@ -2777,8 +2777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {fileID: 2063230509}
   - {fileID: 229598720}
+  - {fileID: 2063230509}
   MaxWaitingTime: 3
   MoveSpeed: 1
 --- !u!4 &1353181402 stripped
@@ -2884,8 +2884,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {fileID: 1868334125}
   - {fileID: 345424130}
+  - {fileID: 1868334125}
   MaxWaitingTime: 3
   MoveSpeed: 1
 --- !u!1 &1468394033
