@@ -7,6 +7,7 @@ namespace GunShooting
 {
     public class Enemy : MonoBehaviour
     {
+        const string EnemyExplodePrefab = "Prefabs/EnemyExplode";
         const int Score = 10;
 
         public Action<int> onDead;
@@ -37,6 +38,8 @@ namespace GunShooting
             }
 
             gameObject.SetActive(false);
+            var obj = (GameObject)Resources.Load(EnemyExplodePrefab);
+            Instantiate(obj, gameObject.transform.position, Quaternion.identity);
         }
     }
 }

@@ -50,6 +50,7 @@ namespace GunShooting
 
             var obj = (GameObject)Resources.Load(PlayerPrefab);
             var instance = Instantiate(obj, PlayerSpawnPoint.transform.position, Quaternion.identity);
+            instance.transform.parent = PlayerSpawnPoint.transform;
             player = instance.GetComponent<Player>();
 
             // TODO back to title scene
