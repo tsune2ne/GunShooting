@@ -10,9 +10,12 @@ namespace GunShooting
         const string EnemyExplodePrefab = "Prefabs/EnemyExplode";
         const int Score = 10;
 
+        [SerializeField] GameObject model;
+
         public Action<int> onDead;
 
         int hp = 3;
+        Material material;
 
         bool isDead { get { return hp == 0; } }
 
@@ -27,6 +30,31 @@ namespace GunShooting
             if (hp == 0)
             {
                 Dead();
+            }
+
+            material.SetColor("_Color", Color.red);
+        }
+
+        private void Start()
+        {
+            var renderer = model.GetComponent<Renderer>();
+            if (renderer)
+            {
+                material = renderer.material;
+            }
+        }
+
+        private void Update()
+        {
+            if (material)
+            {
+                var color = material.GetColor("_Color");
+                var newColor = new Color(
+                    Mathf.Min(1f, color.r + 0.01f),
+                    Mathf.Min(1f, color.g + 0.01f),
+                    Mathf.Min(1f, color.b + 0.01f),
+                    color.a);
+                material.SetColor("_Color", newColor);
             }
         }
 
