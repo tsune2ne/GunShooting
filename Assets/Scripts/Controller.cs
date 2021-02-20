@@ -13,6 +13,7 @@ namespace GunShooting
     public class Controller : MonoBehaviour
     {
         const string PlayerPrefab = "Prefabs/Player";
+        const string HitEffect = "Prefabs/HitEffect";
         const float TimerLimit = 10f;
 
         [SerializeField] Enemy[] Enemies;
@@ -86,6 +87,21 @@ namespace GunShooting
                 if (Input.GetMouseButtonDown(0))
                 {
                     player.Shoot();
+
+                    // Hit
+                    Ray ray = Camera.main.ScreenPointToRay(UIController.CrossSightPosition);
+                    RaycastHit hit;
+                    if (Physics.Raycast(ray, out hit, 1000.0f))
+                    {
+                        var obj = (GameObject)Resources.Load(HitEffect);
+                        Instantiate(obj, hit.point, Quaternion.identity);
+
+                        var enemy = hit.collider.gameObject.GetComponent<Enemy>();
+                        if (enemy)
+                        {
+                            enemy.Hit();
+                        }
+                    }
                 }
 
                 var rotateX = Input.GetAxis("Mouse X");

@@ -23,6 +23,14 @@ namespace GunShooting
             InFinishPanel.Show();
         }
 
+        public Vector3 CrossSightPosition
+        {
+            get
+            {
+                return InPlayPanel.CrossSight.transform.position;
+            }
+        }
+
         public void UpdateInPlayPanel(int score)
         {
             InPlayPanel.UpdateScore(score);

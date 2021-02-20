@@ -6,6 +6,7 @@ namespace GunShooting.UI
     public class InPlayPanel : MonoBehaviour
     {
         [SerializeField] Text ScoreText;
+        [SerializeField] public GameObject CrossSight;
 
         public void Show()
         {
